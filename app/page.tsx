@@ -33,23 +33,13 @@ export default function Home() {
       </header>
 
       {/* Hero Section with Banner */}
-      <div className="w-full">
+      <div className="w-full mb-12">
         <img 
           src="/banner.jpg" 
           alt="배너 이미지"
           className="w-full h-auto"
         />
       </div>
-
-      {/* Main Title Section */}
-      <section className="max-w-4xl mx-auto px-4 pt-16 pb-8 text-center">
-        <h1 className="text-4xl md:text-6xl font-black mb-2 bg-gradient-to-r from-[#2F63FF] to-[#FF5500] bg-clip-text text-transparent">
-          선착순 700명에게
-        </h1>
-        <h2 className="text-4xl md:text-6xl font-black bg-gradient-to-r from-[#FF5500] to-[#FF8D01] bg-clip-text text-transparent">
-          콴다 프리미엄 증정
-        </h2>
-      </section>
 
       {/* 성적 상승률 섹션 */}
       <section className="max-w-4xl mx-auto px-4 pb-8">
@@ -61,36 +51,42 @@ export default function Home() {
               className="h-10 mx-auto mb-6"
             />
             <h3 className="text-2xl font-bold mb-2 text-gray-900">콴다 프리미엄 구독 이후</h3>
-            <div className="mb-4">
+            <div className="mb-2">
               <span className="text-5xl font-black" style={{ color: '#FF5500' }}>성적 상승률 83%</span>
             </div>
-            <p className="text-lg font-medium text-gray-700 mb-2">콴다 프리미엄으로</p>
-            <p className="text-lg font-medium text-gray-700 mb-8">자녀의 성적 향상을 확인해 보세요!</p>
+            <p className="text-sm text-gray-500 mb-6">[프리미엄 사용자 조사, 2023.11.]</p>
             
-            <img 
-              src="/man.webp" 
-              alt="학생 일러스트"
-              className="w-48 h-auto mx-auto mb-4"
-            />
+            {/* 쿠폰 디자인 */}
+            <div className="relative mb-6 mx-auto max-w-md">
+              <div className="flex rounded-2xl shadow-2xl overflow-visible bg-white">
+                {/* 왼쪽 색상 영역 */}
+                <div className="relative bg-gradient-to-b from-[#FF5500] to-[#FF8D01] text-white px-5 py-8 flex items-center justify-center min-w-[110px] rounded-l-2xl">
+                  {/* 반원 컷아웃 효과 - mask 사용 */}
+                  <div className="absolute inset-0 rounded-l-2xl" style={{
+                    WebkitMaskImage: `radial-gradient(circle at -20px 50%, transparent 20px, black 20px)`,
+                    maskImage: `radial-gradient(circle at -20px 50%, transparent 20px, black 20px)`,
+                    backgroundColor: 'inherit'
+                  }}></div>
+                  
+                  <div className="text-center relative z-10">
+                    <p className="text-3xl font-black transform -rotate-12">무료</p>
+                  </div>
+                </div>
+                
+                {/* 오른쪽 메인 콘텐츠 */}
+                <div className="flex-1 px-8 py-6 text-center">
+                  <div className="mb-3">
+                    <p className="text-2xl font-black text-red-500 line-through decoration-4">₩18,500</p>
+                  </div>
+                  <h3 className="text-2xl font-black text-gray-900 mb-3">콴다 프리미엄 1개월</h3>
+                  <p className="text-gray-600">지금 무료로 프리미엄을 사용하고<br/>성적을 올려보세요.</p>
+                </div>
+              </div>
+            </div>
             
-            <p className="text-sm text-gray-500">[프리미엄 사용자 조사, 2023.11.]</p>
-          </div>
-        </div>
-      </section>
-
-      {/* 프리미엄 혜택 섹션 */}
-      <section className="max-w-4xl mx-auto px-4 pb-8">
-        <div className="rounded-2xl p-8" style={{ backgroundColor: '#F0F8FF' }}>
-          <div className="text-center">
-            <h3 className="text-2xl font-bold mb-6 text-gray-900">
-              콴다 프리미엄을 구독한 친구들은<br/>
-              이런 혜택을 누려요
-            </h3>
-            <img 
-              src="/benefit.webp" 
-              alt="프리미엄 혜택"
-              className="w-full max-w-lg h-auto rounded-xl mx-auto"
-            />
+            <div className="inline-block bg-red-500 text-white px-8 py-3 rounded-full">
+              <p className="text-xl font-black">선착순 700명 한정</p>
+            </div>
           </div>
         </div>
       </section>
@@ -109,10 +105,109 @@ export default function Home() {
               학생에게 지금 가장 필요한 풀이 방법으로<br/>
               문제를 해결해 드려요.
             </p>
+            
+            {/* AI 튜터 라벨 */}
+            <div className="mb-6 flex justify-center">
+              <span className="inline-block px-6 py-2 bg-gradient-to-r from-[#2F63FF] to-[#FF5500] text-white font-semibold rounded-full text-sm">
+                AI 튜터 & 동영상 풀이
+              </span>
+            </div>
+            
+            <div className="relative w-1/2 max-w-xs mx-auto mb-12">
+              {/* 모바일 베젤 */}
+              <div className="relative bg-gray-900 rounded-[2rem] p-1 shadow-2xl">
+                {/* 노치 */}
+                <div className="absolute top-1 left-1/2 transform -translate-x-1/2 w-20 h-4 bg-gray-900 rounded-b-xl z-10"></div>
+                {/* 스크린 */}
+                <div className="relative bg-black rounded-[1.75rem] overflow-hidden">
+                  <video 
+                    src="/premium1.mp4" 
+                    className="w-full h-auto rounded-[1.75rem]"
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    style={{ objectFit: 'cover' }}
+                  >
+                    Your browser does not support the video tag.
+                  </video>
+                </div>
+              </div>
+            </div>
+            
+            {/* AI 맞춤 첨삭 라벨 */}
+            <div className="mb-6 flex justify-center">
+              <span className="inline-block px-6 py-2 bg-gradient-to-r from-[#2F63FF] to-[#FF5500] text-white font-semibold rounded-full text-sm">
+                AI 맞춤 첨삭 & 단계별 풀이
+              </span>
+            </div>
+            
+            <div className="relative w-1/2 max-w-xs mx-auto mb-12">
+              {/* 모바일 베젤 */}
+              <div className="relative bg-gray-900 rounded-[2rem] p-1 shadow-2xl">
+                {/* 노치 */}
+                <div className="absolute top-1 left-1/2 transform -translate-x-1/2 w-20 h-4 bg-gray-900 rounded-b-xl z-10"></div>
+                {/* 스크린 */}
+                <div className="relative bg-black rounded-[1.75rem] overflow-hidden">
+                  <video 
+                    src="/premium2.mp4" 
+                    className="w-full h-auto rounded-[1.75rem]"
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    style={{ objectFit: 'cover' }}
+                  >
+                    Your browser does not support the video tag.
+                  </video>
+                </div>
+              </div>
+            </div>
+            
+            {/* AI 퀴즈 라벨 */}
+            <div className="mb-6 flex justify-center">
+              <span className="inline-block px-6 py-2 bg-gradient-to-r from-[#2F63FF] to-[#FF5500] text-white font-semibold rounded-full text-sm">
+                AI 퀴즈 & 유사 문제
+              </span>
+            </div>
+            
+            <div className="relative w-1/2 max-w-xs mx-auto">
+              {/* 모바일 베젤 */}
+              <div className="relative bg-gray-900 rounded-[2rem] p-1 shadow-2xl">
+                {/* 노치 */}
+                <div className="absolute top-1 left-1/2 transform -translate-x-1/2 w-20 h-4 bg-gray-900 rounded-b-xl z-10"></div>
+                {/* 스크린 */}
+                <div className="relative bg-black rounded-[1.75rem] overflow-hidden">
+                  <video 
+                    src="/premium3.mp4" 
+                    className="w-full h-auto rounded-[1.75rem]"
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    style={{ objectFit: 'cover' }}
+                  >
+                    Your browser does not support the video tag.
+                  </video>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 프리미엄 혜택 섹션 */}
+      <section className="max-w-4xl mx-auto px-4 pb-8">
+        <div className="rounded-2xl p-8" style={{ backgroundColor: '#F0F8FF' }}>
+          <div className="text-center">
+            <h3 className="text-2xl font-bold mb-6 text-gray-900">
+              콴다 프리미엄을 구독한 친구들은<br/>
+              이런 혜택을 누려요
+            </h3>
             <img 
-              src="/benefit2.png" 
-              alt="학습 도우미 기능"
-              className="w-full h-auto mx-auto"
+              src="/benefit.webp" 
+              alt="프리미엄 혜택"
+              className="w-full max-w-lg h-auto rounded-xl mx-auto"
             />
           </div>
         </div>
