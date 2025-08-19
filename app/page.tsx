@@ -296,7 +296,7 @@ export default function Home() {
                 </div>
                 <div className="flex-1">
                   <p className="font-bold text-gray-900 mb-1">쿠폰 코드 등록</p>
-                  <p className="text-sm text-gray-600">"프리미엄 쿠폰"에서 위 코드를 붙여넣어 등록</p>
+                  <p className="text-sm text-gray-600">&quot;프리미엄 쿠폰&quot;에서 위 코드를 붙여넣어 등록</p>
                 </div>
                 <button
                   onClick={handleCopy}
