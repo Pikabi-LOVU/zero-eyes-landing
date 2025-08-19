@@ -78,7 +78,7 @@ export default function Home() {
                   <div className="mb-3">
                     <p className="text-2xl font-black text-red-500 line-through decoration-4">₩18,500</p>
                   </div>
-                  <h3 className="text-2xl font-black text-gray-900 mb-3">콴다 프리미엄 1개월</h3>
+                  <h3 className="text-2xl font-black text-gray-900 mb-3">콴다 프리미엄 1개월 무료</h3>
                   <p className="text-gray-600">지금 무료로 프리미엄을 사용하고<br/>성적을 올려보세요.</p>
                 </div>
               </div>
@@ -272,12 +272,29 @@ export default function Home() {
             <div className="space-y-6">
               {/* Step 1 */}
               <div className="flex items-center gap-4 bg-white rounded-xl p-4 shadow-sm">
-                <div className="text-white rounded-full w-10 h-10 flex items-center justify-center text-lg font-bold flex-shrink-0" style={{ backgroundColor: '#2F63FF' }}>
+                <div className="text-white rounded-full w-10 h-10 flex items-center justify-center text-lg font-bold flex-shrink-0" style={{ backgroundColor: '#FF5500' }}>
                   1
                 </div>
                 <div className="flex-1">
-                  <p className="font-bold text-gray-900 mb-1">콴다 웹사이트 접속</p>
-                  <p className="text-sm text-gray-600">로그인 또는 회원가입을 해주세요</p>
+                  <p className="font-bold text-gray-900 mb-1">쿠폰 코드 복사</p>
+                  <p className="text-sm text-gray-600">위 쿠폰 코드를 복사해주세요</p>
+                </div>
+                <button
+                  onClick={handleCopy}
+                  className="px-4 py-2 bg-[#FF5500] text-white rounded-lg text-sm font-medium hover:bg-orange-600 transition-colors flex-shrink-0"
+                >
+                  {copied ? "✓ 복사됨" : "코드 복사"}
+                </button>
+              </div>
+
+              {/* Step 2 */}
+              <div className="flex items-center gap-4 bg-white rounded-xl p-4 shadow-sm">
+                <div className="text-white rounded-full w-10 h-10 flex items-center justify-center text-lg font-bold flex-shrink-0" style={{ backgroundColor: '#2F63FF' }}>
+                  2
+                </div>
+                <div className="flex-1">
+                  <p className="font-bold text-gray-900 mb-1">콴다 웹사이트에서 등록</p>
+                  <p className="text-sm text-gray-600">로그인 후 &quot;프리미엄 쿠폰&quot;에서 코드 등록</p>
                 </div>
                 <a
                   href="https://account.qanda.ai/ko/login/qanda?next=https%3A%2F%2Fqanda.ai%2Fko%2Fsettings&entry_point=settings"
@@ -287,23 +304,6 @@ export default function Home() {
                 >
                   바로가기
                 </a>
-              </div>
-
-              {/* Step 2 */}
-              <div className="flex items-center gap-4 bg-white rounded-xl p-4 shadow-sm">
-                <div className="text-white rounded-full w-10 h-10 flex items-center justify-center text-lg font-bold flex-shrink-0" style={{ backgroundColor: '#FF5500' }}>
-                  2
-                </div>
-                <div className="flex-1">
-                  <p className="font-bold text-gray-900 mb-1">쿠폰 코드 등록</p>
-                  <p className="text-sm text-gray-600">&quot;프리미엄 쿠폰&quot;에서 위 코드를 붙여넣어 등록</p>
-                </div>
-                <button
-                  onClick={handleCopy}
-                  className="px-4 py-2 bg-[#FF5500] text-white rounded-lg text-sm font-medium hover:bg-orange-600 transition-colors flex-shrink-0"
-                >
-                  {copied ? "✓ 복사됨" : "코드 복사"}
-                </button>
               </div>
 
               {/* Step 3 */}
