@@ -249,8 +249,8 @@ export default function Home() {
                 className="h-10 mx-auto mb-3"
               />
               <p className="text-xl font-bold mb-6 text-gray-800">1개월 무료 이용권</p>
-              <div className="bg-white rounded-xl p-6 shadow-sm border border-orange-200 mb-4">
-                <span className="text-4xl md:text-5xl font-black" style={{ color: '#FF5500', letterSpacing: '0.1em' }}>
+              <div className="bg-white rounded-xl p-4 sm:p-6 shadow-sm border border-orange-200 mb-4">
+                <span className="text-xl sm:text-2xl md:text-4xl lg:text-5xl font-black break-all" style={{ color: '#FF5500', letterSpacing: '0.05em' }}>
                   {couponCode}
                 </span>
               </div>
@@ -297,7 +297,7 @@ export default function Home() {
                   <p className="text-sm text-gray-600">로그인 후 &quot;프리미엄 쿠폰&quot;에서 코드 등록</p>
                 </div>
                 <a
-                  href="https://account.qanda.ai/ko/login/qanda?next=https%3A%2F%2Fqanda.ai%2Fko%2Fsettings&entry_point=settings"
+                  href="https://account.qanda.ai/ko/login/qanda?entry_point=settings&next=https%3A%2F%2Fqanda.ai%2Fko%2Fsettings%3Futm_source%3Dzeroeyes_ohrae%26utm_medium%3Dpartner%26utm_campaign%3Dpremium"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="px-4 py-2 bg-[#2F63FF] text-white rounded-lg text-sm font-medium hover:bg-blue-600 transition-colors flex-shrink-0"
